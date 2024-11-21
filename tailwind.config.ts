@@ -8,9 +8,11 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      fontFamily: {
+        stolzLight: "var(--font-stolzlight)",
+        stolzBold: "var(--font-stolzBold)",
+        stolzMedium: "var(--font-stolzMedium)",
+        stolzRegular: "var(--font-stolzRegular)",
       },
     },
   },
