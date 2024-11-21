@@ -8,13 +8,13 @@ type PropsButton = {
     link: string;
 }
 
-const Button = ({ text, transparent, arrowUp, notArrow, link }: PropsButton) => {
+const Button = ({ text }: PropsButton) => {
     return (
         <div className='bg-[#CEFF20] py-3 px-5 text-center w-[256px] rounded-lg'>
             <p className='text-lg font-stolzRegular flex items-center gap-4 text-nowrap'>
                 {text}
                 <span>
-                    <FaArrowDown className="text-base"/>
+                    <FaArrowDown className="text-base" />
                 </span>
             </p>
         </div>
