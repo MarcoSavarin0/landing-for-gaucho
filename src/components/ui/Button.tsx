@@ -6,12 +6,13 @@ type PropsButton = {
     arrowUp: boolean;
     notArrow: boolean;
     link: string;
+    width: string;
 }
 
-const Button = ({ text }: PropsButton) => {
+const Button = ({ text, transparent, width }: PropsButton) => {
     return (
-        <div className='bg-[#CEFF20] py-3 px-5 text-center w-[256px] rounded-lg'>
-            <p className='text-lg font-stolzRegular flex items-center gap-4 text-nowrap'>
+        <div className={`py-3 px-5 text-center ${width} rounded-lg ` + (transparent ? 'bg-transparent' : 'bg-[#CEFF20]')}>
+            <p className='text-lg font-stolzRegular flex items-center justify-center gap-4 text-nowrap'>
                 {text}
                 <span>
                     <FaArrowDown className="text-base" />

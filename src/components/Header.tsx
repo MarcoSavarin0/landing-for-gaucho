@@ -8,7 +8,7 @@ const Header = () => {
                 <TopHeader />
             </div>
             <section className='mt-24 md:mt-36 md:relative md:w-[65%] lg:w-[70%]'>
-                <h1 className='text-white font-stolzRegular text-4xl leading-tight mb-4 lg:text-5xl lg:mb-5 xl:text-6xl 2xl:pr-72'>
+                <h1 className='text-white font-stolzRegular text-4xl leading-tight mb-4 lg:text-5xl lg:mb-5 xl:text-6xl 2xl:pr-80'>
                     Transformando
                     ideas en
                     resultados
@@ -24,7 +24,7 @@ const Header = () => {
                     Desde hace años, nos asociamos con empresas que buscan crecer y destacarse. Convertimos tus ideas y objetivos en estrategias digitales que generan resultados de verdad.
                 </p>
                 <div className='mt-7 relative md:mt-10'>
-                    <Button text={'¿Que hace Gaucho?'} transparent={false} arrowUp={false} notArrow={false} link='' />
+                    <Button text={'¿Que hace Gaucho?'} transparent={false} arrowUp={false} notArrow={false} link='' width='w-[256px]' />
                     <Image
                         src={'/Capa_1.svg'}
                         alt=''
