@@ -3,6 +3,7 @@ import Header from "@/components/Header"
 import SecondSection from "@/components/SecondSection";
 import ThirdSection from "@/components/ThirdSection";
 import FourthSection from "@/components/FourthSection";
+import FifthSection from "@/components/FifthSection";
 const stolzlight = localFont({
     src: "./fonts/Stolzl-Light.ttf",
     variable: "--font-stolzlight",
@@ -40,6 +41,9 @@ export default function Home() {
                 </div>
                 <div className="px-8 md:px-9 lg:px-24 xl:px-40 2xl:px-60 mt-40 md:mt-48 lg:mt-72">
                     <FourthSection />
+                </div>
+                <div className="px-8 md:px-9 lg:px-24 xl:px-40 2xl:px-60 mt-40 md:mt-48 lg:mt-72">
+                    <FifthSection />
                 </div>
             </div>
         </div>

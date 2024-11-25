@@ -1,4 +1,5 @@
 import { FaArrowDown } from "react-icons/fa";
+import { GoArrowUpRight } from "react-icons/go";
 
 type PropsButton = {
     text: string;
@@ -11,11 +12,13 @@ type PropsButton = {
 
 const Button = ({ text, transparent, width }: PropsButton) => {
     return (
-        <div className={`py-3 px-5 text-center ${width} rounded-lg ` + (transparent ? 'bg-transparent' : 'bg-[#CEFF20]')}>
-            <p className='text-lg font-stolzRegular flex items-center justify-center gap-4 text-nowrap'>
+        <div className={`py-3 px-5 text-center ${width} rounded-lg border-2 border-[#CEFF20] border-solid ` + (transparent ? 'bg-transparent' : 'bg-[#CEFF20]')}>
+            <p className={'text-lg font-stolzRegular flex items-center justify-center gap-4 text-nowrap ' + (transparent ? 'text-[#CEFF20]': '')}>
                 {text}
                 <span>
-                    <FaArrowDown className="text-base" />
+                    {
+                        transparent ? <GoArrowUpRight className="text-xl" /> : <FaArrowDown className="text-base" />
+                    }
                 </span>
             </p>
         </div>
