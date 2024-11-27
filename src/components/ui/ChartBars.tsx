@@ -30,12 +30,12 @@ const chartConfig = {
 const ChartBars = () => {
     return (
         <div className='w-full '>
-            <Card className="w-full bg-[#181819] border-2 border-[#242425] rounded-xl">
+            <Card className="w-full lg:h-[320px] xl:h-[350px] 2xl:h-[435px]  bg-[#181819] border-2 border-[#242425] rounded-xl">
                 <CardHeader>
                     <CardDescription className='text-[#FF8CF4] font-stolzLight lg:ml-7'>Valor de conversión de compras</CardDescription>
                 </CardHeader>
                 <CardContent>
-                    <ChartContainer config={chartConfig} className="w-full h-full">
+                    <ChartContainer config={chartConfig} className="w-full h-full py-5">
                         <BarChart accessibilityLayer data={chartData}>
                             <CartesianGrid vertical={false} />
                             <XAxis
@@ -61,8 +61,8 @@ const ChartBars = () => {
                 </CardContent>
             </Card>
             <div className="text-center text-white my-6 px-4">
-                <h3 className="text-xl font-stolzMedium">Aumento en conversiones</h3>
-                <p className="text-[14px] font-stolzRegular text-gray-200">Ayudamos a [Nombre de Cliente] a aumentar sus conversiones en un X% en solo 3 meses.</p>
+                <h3 className="text-xl font-stolzMedium xl:text-3xl lg:mb-3">Aumento en conversiones</h3>
+                <p className="text-[14px] font-stolzRegular text-gray-200 xl:text-[16px]">Ayudamos a [Nombre de Cliente] a aumentar sus conversiones en un X% en solo 3 meses.</p>
             </div>
         </div>
     )

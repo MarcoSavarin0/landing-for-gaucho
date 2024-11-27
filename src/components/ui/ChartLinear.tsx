@@ -32,10 +32,9 @@ const ChartLinear = () => {
     return (
         
         <div className='w-full '>
-            <Card className="w-full bg-[#181819] border-2 border-[#242425] rounded-xl">
-                <CardContent>
-                    
-                    <ChartContainer config={chartConfig} className="pr-6 py-3 h-full">
+            <Card className="w-full lg:h-[320px] xl:h-[350px] 2xl:h-[435px]  bg-[#181819] border-2 border-[#242425] rounded-xl">
+                <CardContent className="xl:pt-5">
+                    <ChartContainer config={chartConfig} className="pr-6 h-full lg:h-max-[294px] ">
                         <AreaChart
                             accessibilityLayer
                             data={chartData}
@@ -80,8 +79,8 @@ const ChartLinear = () => {
                 </CardFooter>
             </Card>
             <div className="text-center text-white my-6 px-4">
-                <h3 className="text-xl font-stolzMedium">Reducción de costos</h3>
-                <p className="text-[14px] font-stolzRegular text-gray-200">Con nuestra estrategia, [Nombre de Cliente] redujo sus costos publicitarios un X%, sin afectar el rendimiento.</p>
+                <h3 className="text-xl font-stolzMedium xl:text-3xl lg:mb-3">Reducción de costos</h3>
+                <p className="text-[14px] font-stolzRegular text-gray-200 xl:text-[16px]">Con nuestra estrategia, [Nombre de Cliente] redujo sus costos publicitarios un X%, sin afectar el rendimiento.</p>
             </div>
         </div>
     );

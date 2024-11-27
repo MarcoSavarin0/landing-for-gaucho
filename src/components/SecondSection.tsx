@@ -17,7 +17,7 @@ const SecondSection = () => {
                         width={122}
                         height={120}
                         alt='corazon'
-                        className='hidden lg:block lg:absolute lg:-top-4 lg:right-0 xl:right-[20%] xl:-top-8 2xl:right-[40%]'
+                        className='hidden lg:block lg:absolute lg:-top-4 lg:right-0 xl:right-[20%] xl:-top-8 2xl:right-[33%]'
                     />
                 </div>
             </div>
