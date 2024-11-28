@@ -4,7 +4,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
-import { Button } from "@/components/ui/button";
 import {
     Form,
     FormControl,
@@ -179,12 +178,12 @@ const ContactForm = () => {
                 </div>
 
 
-                <Button
+                <button
                     type="submit"
                     className="bg-[#CEFF20] w-full text-black py-3 px-6 font-stolzRegular text-lg rounded-lg hover:bg-[#b6e619]"
                 >
                     Enviar
-                </Button>
+                </button>
             </form>
         </Form>
     );
