@@ -1,6 +1,6 @@
 "use client"
 import { useState } from "react"
-import { Calendar } from "@/components/ui/calendar"
+import { Calendar } from "./calendar"
 import Image from "next/image"
 const Calendario = () => {
     const [date, setDate] = useState<Date | undefined>(new Date())
