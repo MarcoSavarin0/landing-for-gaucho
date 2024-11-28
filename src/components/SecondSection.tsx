@@ -1,4 +1,4 @@
-import Button from './ui/Button'
+import Button from './ui/ButtonGeneral'
 import Image from 'next/image'
 const SecondSection = () => {
     return (
@@ -11,7 +11,7 @@ const SecondSection = () => {
                     Nos enfocamos en estrategias que maximizan tu inversión, ya sea para captar clientes, hacer crecer tu empresa o fortalecer la identidad de tu marca. Cada acción que diseñamos busca generar un impacto relevante y medible.
                 </p>
                 <div className='relative'>
-                    <Button text={'¿A quiénes ayudamos?'} transparent={false} arrowUp={false} notArrow={false} link='' width='w-full lg:w-[296px] h-auto' />
+                    <Button text={'¿A quiénes ayudamos?'} transparent={false} arrowUp={false} notArrow={false} link='' width='w-full lg:w-[296px] h-auto' whatsapp={false}  textSize='' />
                     <Image
                         src={'/corazon.svg'}
                         width={122}

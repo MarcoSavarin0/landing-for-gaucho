@@ -1,4 +1,4 @@
-import Button from "./ui/Button"
+import Button from "./ui/ButtonGeneral"
 
 const FourthSection = () => {
     return (
@@ -38,8 +38,8 @@ const FourthSection = () => {
                 </div>
             </div>
             <div className="w-full flex flex-col gap-5 items-center lg:flex-row lg:items-center lg:mt-6">
-                <Button text="Resultados clientes Gaucho" transparent={false} width="w-full md:w-fit md:w-auto lg:w-1/2" arrowUp={false} notArrow={false} link='' />
-                <Button text="Conocé nuestro portfolio" transparent={true} width="w-full md:w-fit md:w-auto lg:w-1/2" arrowUp={false} notArrow={false} link='' />
+                <Button text="Resultados clientes Gaucho" transparent={false} width="w-full md:w-fit md:w-auto lg:w-1/2" arrowUp={false} notArrow={false} link=''  whatsapp={false} textSize=''/>
+                <Button text="Conocé nuestro portfolio" transparent={true} width="w-full md:w-fit md:w-auto lg:w-1/2" arrowUp={false} notArrow={false} link=''  whatsapp={false} textSize=''/>
             </div>
         </div>
     )
