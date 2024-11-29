@@ -4,8 +4,10 @@
 
 body {
   font-family: 'Stolzl-Light', sans-serif;
-
 }
+html {
+    @apply scroll-smooth;
+  }
 
 @layer base {
   :root {

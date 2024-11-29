@@ -49,7 +49,7 @@ const ThirdSection = () => {
                         </div>
                     </div>
                 </div>
-                <ButtonG text={'¿Cómo trabajamos?'} transparent={false} arrowUp={false} notArrow={false} link='' width='w-full lg:w-[296px] h-auto'  whatsapp={false} textSize=''/>
+                <ButtonG text={'¿Cómo trabajamos?'} transparent={false} arrowUp={false} notArrow={false} link='#comoTrabajamos' width='w-full lg:w-[296px] h-auto'  whatsapp={false} textSize=''/>
             </div>
             <div className="mt-10 lg:w-[50%] lg:bg-[url('/img2.png')] lg:bg-no-repeat lg:bg-center lg:bg-cover lg:mt-0 2xl:w-[40%]">
                 <Image

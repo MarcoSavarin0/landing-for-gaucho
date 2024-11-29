@@ -73,117 +73,124 @@ const ContactForm = () => {
                 onSubmit={form.handleSubmit(onSubmit)}
                 className="flex flex-col gap-6 lg:items-center lg:justify-center w-full"
             >
-                <div className="flex flex-col gap-4 lg:flex-row w-full">
-                    <div className="lg:w-1/2">
+                <div className="flex flex-col gap-4">
+                    <h2 className="text-2xl text-white font-stolzMedium mb-10 lg:text-[40px] ">
+                        Contacto
+                    </h2>
+                    <div className="flex flex-col lg:flex-row lg:gap-8 items-start">
+                        <div className="flex flex-col w-full gap-4">
+                            <FormField
+                                control={form.control}
+                                name="name"
+                                render={({ field }) => (
+                                    <FormItem>
+                                        <FormLabel className="text-white font-stolzLight">Nombre*</FormLabel>
+                                        <FormControl>
+                                            <Input className="text-[#9CA3AF] bg-[#27282D] border-[1px] border-[#9CA3AF] font-stolzLight" placeholder="Ingresa tu nombre" {...field} />
+                                        </FormControl>
+                                        <FormMessage />
+                                    </FormItem>
+                                )}
+                            />
+
+
+                            <FormField
+                                control={form.control}
+                                name="email"
+                                render={({ field }) => (
+                                    <FormItem className="">
+                                        <FormLabel className="text-white font-stolzLight">Correo Electrónico*</FormLabel>
+                                        <FormControl>
+                                            <Input className="text-[#9CA3AF] bg-[#27282D] border-[1px] border-[#9CA3AF] font-stolzLight" placeholder="email@ejemplo.com" {...field} />
+                                        </FormControl>
+                                        <FormMessage />
+                                    </FormItem>
+                                )}
+                            />
+
+                        </div>
+
+                        <div className="flex flex-col gap-4 w-full">
+                            <FormField
+                                control={form.control}
+                                name="empresa"
+                                render={({ field }) => (
+                                    <FormItem>
+                                        <FormLabel className="text-white font-stolzLight">Empresa*</FormLabel>
+                                        <FormControl>
+                                            <Input className="text-[#9CA3AF] bg-[#27282D] border-[1px] border-[#9CA3AF] font-stolzLight" placeholder="Nombre de tu empresa" {...field} />
+                                        </FormControl>
+                                        <FormMessage />
+                                    </FormItem>
+                                )}
+                            />
+                            <div className="flex gap-3">
+                                <FormField
+                                    control={form.control}
+                                    name="codArea"
+                                    render={({ field }) => (
+                                        <FormItem className="w-1/4">
+                                            <FormLabel className="text-white font-stolzLight text-nowrap">Cód. Área</FormLabel>
+                                            <FormControl>
+                                                <Input className="text-[#9CA3AF] bg-[#27282D] border-[1px] border-[#9CA3AF] font-stolzLight" placeholder="+54" {...field} />
+                                            </FormControl>
+                                            <FormMessage />
+                                        </FormItem>
+                                    )}
+                                />
+                                <FormField
+                                    control={form.control}
+                                    name="telefono"
+                                    render={({ field }) => (
+                                        <FormItem className="w-full">
+                                            <FormLabel className="text-white font-stolzLight">Número Telefónico</FormLabel>
+                                            <FormControl>
+                                                <Input className="text-[#9CA3AF] bg-[#27282D] border-[1px] border-[#9CA3AF] font-stolzLight" placeholder="Ingresa tu número" {...field} />
+                                            </FormControl>
+                                            <FormMessage />
+                                        </FormItem>
+                                    )}
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="flex flex-col gap-4 w-full">
                         <FormField
                             control={form.control}
-                            name="name"
+                            name="presupuesto"
                             render={({ field }) => (
                                 <FormItem>
-                                    <FormLabel className="text-white font-stolzLight">Nombre*</FormLabel>
+                                    <FormLabel className="text-white font-stolzLight">¿Cuánto presupuesto están invirtiendo?</FormLabel>
                                     <FormControl>
-                                        <Input className="text-[#9CA3AF] bg-[#27282D] border-[1px] border-[#9CA3AF] font-stolzLight" placeholder="Ingresa tu nombre" {...field} />
+                                        <Input className="text-[#9CA3AF] bg-[#27282D] border-[1px] border-[#9CA3AF] font-stolzLight" placeholder="Presupuesto" {...field} />
+                                    </FormControl>
+                                    <FormMessage />
+                                </FormItem>
+                            )}
+                        />
+                        <FormField
+                            control={form.control}
+                            name="mensaje"
+                            render={({ field }) => (
+                                <FormItem>
+                                    <FormLabel className="text-white font-stolzLight">Mensaje</FormLabel>
+                                    <FormControl>
+                                        <Textarea className="text-[#9CA3AF] bg-[#27282D] border-[1px] border-[#9CA3AF] font-stolzLight" placeholder="Déjanos tu consulta" {...field} />
                                     </FormControl>
                                     <FormMessage />
                                 </FormItem>
                             )}
                         />
                     </div>
-                    <div className="lg:w-1/2">
-                        <FormField
-                            control={form.control}
-                            name="empresa"
-                            render={({ field }) => (
-                                <FormItem>
-                                    <FormLabel className="text-white font-stolzLight">Empresa*</FormLabel>
-                                    <FormControl>
-                                        <Input className="text-[#9CA3AF] bg-[#27282D] border-[1px] border-[#9CA3AF] font-stolzLight"  placeholder="Nombre de tu empresa" {...field} />
-                                    </FormControl>
-                                    <FormMessage />
-                                </FormItem>
-                            )}
-                        />
-                    </div>
+
+
+                    <button
+                        type="submit"
+                        className="bg-[#CEFF20] w-full text-black py-3 px-6 font-stolzRegular text-lg rounded-lg hover:bg-[#b6e619]"
+                    >
+                        Enviar
+                    </button>
                 </div>
-
-                <div className="flex flex-col gap-4 lg:flex-row w-full">
-                    <FormField
-                        control={form.control}
-                        name="email"
-                        render={({ field }) => (
-                            <FormItem className="lg:w-2/5">
-                                <FormLabel className="text-white font-stolzLight">Correo Electrónico*</FormLabel>
-                                <FormControl>
-                                    <Input className="text-[#9CA3AF] bg-[#27282D] border-[1px] border-[#9CA3AF] font-stolzLight"  placeholder="email@ejemplo.com" {...field} />
-                                </FormControl>
-                                <FormMessage />
-                            </FormItem>
-                        )}
-                    />
-                    <FormField
-                        control={form.control}
-                        name="codArea"
-                        render={({ field }) => (
-                            <FormItem className="lg:w-1/5">
-                                <FormLabel className="text-white font-stolzLight">Cód. Área</FormLabel>
-                                <FormControl>
-                                    <Input className="text-[#9CA3AF] bg-[#27282D] border-[1px] border-[#9CA3AF] font-stolzLight"  placeholder="+54" {...field} />
-                                </FormControl>
-                                <FormMessage />
-                            </FormItem>
-                        )}
-                    />
-                    <FormField
-                        control={form.control}
-                        name="telefono"
-                        render={({ field }) => (
-                            <FormItem className="lg:w-2/5">
-                                <FormLabel className="text-white font-stolzLight">Número Telefónico</FormLabel>
-                                <FormControl>
-                                    <Input className="text-[#9CA3AF] bg-[#27282D] border-[1px] border-[#9CA3AF] font-stolzLight"  placeholder="Ingresa tu número" {...field} />
-                                </FormControl>
-                                <FormMessage />
-                            </FormItem>
-                        )}
-                    />
-                </div>
-
-                <div className="flex flex-col gap-4 w-full">
-                    <FormField
-                        control={form.control}
-                        name="presupuesto"
-                        render={({ field }) => (
-                            <FormItem>
-                                <FormLabel className="text-white font-stolzLight">¿Cuánto presupuesto están invirtiendo?</FormLabel>
-                                <FormControl>
-                                    <Input className="text-[#9CA3AF] bg-[#27282D] border-[1px] border-[#9CA3AF] font-stolzLight"  placeholder="Presupuesto" {...field} />
-                                </FormControl>
-                                <FormMessage />
-                            </FormItem>
-                        )}
-                    />
-                    <FormField
-                        control={form.control}
-                        name="mensaje"
-                        render={({ field }) => (
-                            <FormItem>
-                                <FormLabel className="text-white font-stolzLight">Mensaje</FormLabel>
-                                <FormControl>
-                                    <Textarea className="text-[#9CA3AF] bg-[#27282D] border-[1px] border-[#9CA3AF] font-stolzLight"  placeholder="Déjanos tu consulta" {...field} />
-                                </FormControl>
-                                <FormMessage />
-                            </FormItem>
-                        )}
-                    />
-                </div>
-
-
-                <button
-                    type="submit"
-                    className="bg-[#CEFF20] w-full text-black py-3 px-6 font-stolzRegular text-lg rounded-lg hover:bg-[#b6e619]"
-                >
-                    Enviar
-                </button>
             </form>
         </Form>
     );

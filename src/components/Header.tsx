@@ -24,7 +24,7 @@ const Header = () => {
                     Desde hace años, nos asociamos con empresas que buscan crecer y destacarse. Convertimos tus ideas y objetivos en estrategias digitales que generan resultados de verdad.
                 </p>
                 <div className='mt-7 relative md:mt-10'>
-                    <ButtonG text={'¿Que hace Gaucho?'} transparent={false} arrowUp={false} notArrow={false} link='' width='w-[256px]'  whatsapp={false} textSize=''/>
+                    <ButtonG text={'¿Que hace Gaucho?'} transparent={false} arrowUp={false} notArrow={false} link='#quehacemos' width='w-[256px]'  whatsapp={false} textSize=''/>
                     <Image
                         src={'/Capa_1.svg'}
                         alt=''

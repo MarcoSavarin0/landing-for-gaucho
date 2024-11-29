@@ -11,10 +11,10 @@ const Footer = () => {
                     <p className="text-sm text-white font-stolzLight mt-6">© Gaucho Digital 2024</p>
                 </div>
                 <div className="flex gap-4 items-center">
-                    <Link href={'#'} className="text-black bg-white rounded-md p-3">
+                    <Link href={'https://www.instagram.com/gauchodigital.ok/'} target="_blank" className="text-black bg-white rounded-md p-3">
                         <FaInstagram />
                     </Link>
-                    <Link href={'#'} className="text-black bg-white rounded-md p-3">
+                    <Link href={'https://www.linkedin.com/company/gaucho-digital/posts/?feedView=all'} target="_blank" className="text-black bg-white rounded-md p-3">
                         <FaLinkedinIn />
                     </Link>
                 </div>

@@ -2,7 +2,7 @@ import ButtonG from './ui/ButtonGeneral'
 import Image from 'next/image'
 const SecondSection = () => {
     return (
-        <section className='flex flex-col gap-10 lg:flex-row-reverse items-center 2xl:gap-14 justify-center'>
+        <section className='flex flex-col gap-10 lg:flex-row-reverse items-center 2xl:gap-14 justify-center'  >
             <div className='lg:w-3/4 2xl:pr-12'>
                 <h2 className='text-white text-3xl font-stolzMedium mb-3 lg:text-[40px]'>
                     Lo que hacemos
@@ -11,7 +11,7 @@ const SecondSection = () => {
                     Nos enfocamos en estrategias que maximizan tu inversión, ya sea para captar clientes, hacer crecer tu empresa o fortalecer la identidad de tu marca. Cada acción que diseñamos busca generar un impacto relevante y medible.
                 </p>
                 <div className='relative'>
-                    <ButtonG text={'¿A quiénes ayudamos?'} transparent={false} arrowUp={false} notArrow={false} link='' width='w-full lg:w-[296px] h-auto' whatsapp={false}  textSize='' />
+                    <ButtonG text={'¿A quiénes ayudamos?'} transparent={false} arrowUp={false} notArrow={false} link='#ayudamos' width='w-full lg:w-[296px] h-auto' whatsapp={false}  textSize='' />
                     <Image
                         src={'/corazon.svg'}
                         width={122}
