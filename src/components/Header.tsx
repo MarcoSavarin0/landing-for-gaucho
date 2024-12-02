@@ -1,13 +1,29 @@
 import TopHeader from './TopHeader'
 import ButtonG from './ui/ButtonGeneral'
 import Image from 'next/image'
+import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion';
+
 const Header = () => {
+    const { ref, inView } = useInView({
+        threshold: 0.1,
+        triggerOnce: true
+    });
+    const variants = {
+        visible: { opacity: 1, x: 0 },
+        hidden: { opacity: 0, x: -100 },
+    }
     return (
-        <>
+        <motion.div
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        variants={variants}
+        transition={{ duration: 0.7 }}
+        >
             <div>
                 <TopHeader />
             </div>
-            <section className='mt-24 md:mt-36 md:relative md:w-[65%] lg:w-[70%]'>
+            <section className='mt-24 lg:mt-16  xl:mt-36 md:relative md:w-[65%] lg:w-[70%]' ref={ref}>
                 <h1 className='text-white font-stolzRegular text-4xl leading-tight mb-4 lg:text-5xl lg:mb-5 xl:text-6xl 2xl:pr-40'>
                     Transformando
                     ideas en
@@ -18,7 +34,7 @@ const Header = () => {
                     alt=''
                     width={100}
                     height={100}
-                    className='hidden md:block md:absolute md:top-2 md:-right-12 lg:-right-2 xl:-right-24 2xl:right-12'
+                    className='hidden md:block md:absolute md:top-2 md:-right-12 lg:-right-10 xl:-right-24 2xl:right-12'
                 />
                 <p className='text-white font-stolzLight text-base leading-tight 2xl:w-[90%] 2xl:text-[20px] 2xl:leading-tight 2xl:pr-20'>
                     Desde hace años, nos asociamos con empresas que buscan crecer y destacarse. Convertimos tus ideas y objetivos en estrategias digitales que generan resultados de verdad.
@@ -34,7 +50,7 @@ const Header = () => {
                     />
                 </div>
             </section>
-        </>
+        </motion.div>
     )
 }
 

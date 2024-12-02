@@ -1,10 +1,25 @@
 import ButtonG from './ui/ButtonGeneral'
 import Image from 'next/image'
+import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion';
 const SecondSection = () => {
+    const { ref, inView } = useInView({
+        threshold: 0.1,
+        triggerOnce: true
+    });
+    const variants = {
+        visible: { opacity: 1, x: 0 },
+        hidden: { opacity: 0, x: 100 },
+    }
     return (
-        <section className='flex flex-col gap-10 lg:flex-row-reverse items-center 2xl:gap-14 justify-center'  >
+        <motion.section 
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        variants={variants}
+        transition={{ duration: 0.7 }}
+        className='flex flex-col gap-10 lg:flex-row-reverse items-center 2xl:gap-14 justify-center'  >
             <div className='lg:w-3/4 2xl:pr-12'>
-                <h2 className='text-white text-3xl font-stolzMedium mb-3 lg:text-[40px]'>
+                <h2 className='text-white text-3xl font-stolzMedium mb-3 lg:text-[40px]' ref={ref}>
                     Lo que hacemos
                 </h2>
                 <p className='text-white text-[16px] leading-tight font-stolzLight mb-10 2xl:w-3/4'>
@@ -30,7 +45,7 @@ const SecondSection = () => {
                     className='w-full lg:max-w-[532px] lg:max-h-[366px]'
                 />
             </div>
-        </section>
+        </motion.section>
     )
 }
 

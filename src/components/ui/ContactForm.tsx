@@ -1,9 +1,10 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-
+import { useState } from "react";
 import {
     Form,
     FormControl,
@@ -61,10 +62,40 @@ const ContactForm = () => {
             mensaje: "",
         },
     });
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState<string | null>(null);
+    const [success, setSuccess] = useState<string | null>(null);
 
-    const onSubmit = (data: FormValues) => {
-        console.log("Datos del formulario:", data);
-        alert(`Formulario enviado: ${data.name}`);
+    const onSubmit = async (data: FormValues) => {
+        try {
+            setLoading(true);
+            setError(null);
+            setSuccess(null);
+
+            const response = await fetch('/api/contact/route', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+
+            if (!response.ok) {
+                throw new Error('Hubo un error al enviar el formulario');
+            }
+
+            const result = await response.json();
+            setSuccess('Formulario enviado correctamente');
+            form.reset();
+        } catch (error: unknown) {
+            if (error instanceof Error) {
+                setError(error.message);
+            } else {
+                setError('Hubo un error al enviar el formulario');
+            }
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
@@ -182,13 +213,15 @@ const ContactForm = () => {
                             )}
                         />
                     </div>
-
-
+                    {loading && <p className="text-white">Enviando...</p>}
+                    {error && <p className="text-red-500">{error}</p>}
+                    {success && <p className="text-green-500">{success}</p>}
                     <button
                         type="submit"
                         className="bg-[#CEFF20] w-full text-black py-3 px-6 font-stolzRegular text-lg rounded-lg hover:bg-[#b6e619]"
+                        disabled={loading}
                     >
-                        Enviar
+                        {loading ? 'Enviando...' : 'Enviar'}
                     </button>
                 </div>
             </form>
