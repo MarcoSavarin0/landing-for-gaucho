@@ -11,7 +11,7 @@ export default async function handler(req, res) {
                 return res.status(400).json({ message: 'Todos los campos son obligatorios.' });
             }
 
-            const emailTemplatePath = path.join(process.cwd(), 'htmlMail', 'message.html');
+            const emailTemplatePath = path.join(process.cwd(), 'htmlmail', 'message.html');
             const emailHtmlContent = fs.readFileSync(emailTemplatePath, 'utf-8');
 
             const transporter = nodemailer.createTransport({
