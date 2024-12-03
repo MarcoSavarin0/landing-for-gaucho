@@ -6,7 +6,7 @@ import FourthSection from "./FourthSection"
 import Header from "./Header"
 import SecondSection from "./SecondSection"
 import SeventhSection from "./SeventhSection"
-import SixthSection from "./SixthSection"
+// import SixthSection from "./SixthSection"
 import ThirdSection from "./ThirdSection"
 
 
@@ -29,9 +29,9 @@ const HomeWrap = () => {
             <div className="px-8 md:px-9 lg:px-24 xl:px-40 2xl:px-80 mt-40 md:mt-48 lg:mt-72 xl:mt-96" id="resultados">
                 <FifthSection />
             </div>
-            <div className="px-8 md:px-9 lg:px-24 xl:px-40 2xl:px-80 mt-40 md:mt-48 lg:mt-72 xl:mt-96" id="clientes">
+            {/* <div className="px-8 md:px-9 lg:px-24 xl:px-40 2xl:px-80 mt-40 md:mt-48 lg:mt-72 xl:mt-96" id="clientes">
                 <SixthSection />
-            </div>
+            </div> */}
             <div className="px-8 md:px-9 lg:px-24 xl:px-40 2xl:px-80 mt-40 md:mt-48 lg:mt-72 xl:mt-96" id="consulta">
                 <SeventhSection />
             </div>
