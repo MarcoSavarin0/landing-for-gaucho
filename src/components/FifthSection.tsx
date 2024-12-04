@@ -41,7 +41,7 @@ const FifthSection = () => {
                     </>
                 )}
             </div>
-            <ButtonG text="Testimonios de clientes" transparent={false} width="w-full" arrowUp={false} notArrow={false} link='#clientes' whatsapp={false} textSize='' />
+            <ButtonG text="Consultanos" transparent={false} width="w-full" arrowUp={false} notArrow={false} link='#consulta' whatsapp={false} textSize='' />
         </motion.div>
     )
 }

@@ -35,7 +35,7 @@ const HomeWrap = () => {
             <div className="px-8 md:px-9 lg:px-24 xl:px-40 2xl:px-80 mt-40 md:mt-48 lg:mt-72 xl:mt-96" id="consulta">
                 <SeventhSection />
             </div>
-            <div className="px-8 md:px-9 lg:px-24 xl:px-40 2xl:px-80 mt-40 md:mt-48 lg:mt-72 xl:mt-96">
+            <div className="px-8 md:px-9 lg:px-24 xl:px-40 2xl:px-80 mt-40 md:mt-48 lg:mt-72 xl:mt-96" id="contacto">
                 <EighthSection />
             </div>
             <div className="px-8 md:px-9 lg:px-24 xl:px-40 2xl:px-80 mt-40 md:mt-48 lg:mt-72 xl:mt-96">

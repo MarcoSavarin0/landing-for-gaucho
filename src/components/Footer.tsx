@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="pb-10">
             <div className="flex justify-between items-center border-b-[1px] border-white pb-5">
                 <div>
-                    <TopHeader />
+                    <TopHeader  />
                     <p className="text-sm text-white font-stolzLight mt-6">© Gaucho Digital 2024</p>
                 </div>
                 <div className="flex gap-4 items-center">

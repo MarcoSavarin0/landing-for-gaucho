@@ -62,7 +62,7 @@ const ChartBars = () => {
             </Card>
             <div className="text-center text-white my-6 px-4">
                 <h3 className="text-xl font-stolzMedium xl:text-3xl lg:mb-3">Aumento en conversiones</h3>
-                <p className="text-[14px] font-stolzRegular text-gray-200 xl:text-[16px]">Ayudamos a [Nombre de Cliente] a aumentar sus conversiones en un X% en solo 3 meses.</p>
+                <p className="text-[14px] font-stolzRegular text-gray-200 xl:text-[16px]">Gracias a nuestra estrategia de paid media, logramos un gran crecimiento en ventas y aumentar un 130% la facturación en solo 6 meses.</p>
             </div>
         </div>
     )
