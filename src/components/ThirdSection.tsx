@@ -8,8 +8,8 @@ const ThirdSection = () => {
         triggerOnce: true
     });
     const variants = {
-        visible: { opacity: 1, x: 0, y: 0 },
-        hidden: { opacity: 0, x: 0, y: 100 },
+        visible: { opacity: 1, y: 0 },
+        hidden: { opacity: 0, y: 100 },
     }
     return (
         <motion.section
