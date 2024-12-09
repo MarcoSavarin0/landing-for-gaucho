@@ -21,7 +21,6 @@ const ButtonG = ({ text, transparent, width, whatsapp, notArrow, textSize, link 
             if (target) {
                 let offset = 0;
     
-                // Calcular el desplazamiento dinámico según el ID y la resolución
                 const screenHeight = window.innerHeight;
     
                 if (link === "#quehacemos") {
@@ -36,13 +35,13 @@ const ButtonG = ({ text, transparent, width, whatsapp, notArrow, textSize, link 
                     offset = screenHeight < 768 ? -100 : -200;
                 } else if (link === "#consulta") {
                     offset = screenHeight < 768 ? -100 : -200;
+                } else if (link === "#contacto") {
+                    offset = screenHeight < 768 ? 30 : -100;
                 }
     
-                // Cálculo de la posición final ajustada
                 const position =
                     target.getBoundingClientRect().top + window.scrollY + offset;
     
-                // Desplazamiento suave
                 window.scrollTo({ top: position, behavior: "smooth" });
             }
         }

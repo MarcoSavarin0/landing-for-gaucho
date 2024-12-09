@@ -1,6 +1,6 @@
 import localFont from "next/font/local";
 import HomeWrap from "@/components/HomeWrap";
-
+import { UpButton } from "@/components/UpButton";
 const stolzlight = localFont({
     src: "./fonts/Stolzl-Light.ttf",
     variable: "--font-stolzlight",
@@ -26,7 +26,8 @@ const stolzRegular = localFont({
 
 export default function Home() {
     return (
-        <div className={`${stolzlight.variable} ${stolzBold.variable} ${stolzMedium.variable} ${stolzRegular.variable}`}>
+        <div className={`${stolzlight.variable} ${stolzBold.variable} ${stolzMedium.variable} ${stolzRegular.variable} `}>
+            <UpButton></UpButton>
             <HomeWrap />
         </div>
     );

@@ -1,4 +1,4 @@
-
+'use client'
 import Footer from "./Footer"
 import EighthSection from "./EighthSection"
 import FifthSection from "./FifthSection"
@@ -8,13 +8,36 @@ import SecondSection from "./SecondSection"
 import SeventhSection from "./SeventhSection"
 // import SixthSection from "./SixthSection"
 import ThirdSection from "./ThirdSection"
+import { useEffect, useState } from 'react';
 
 
 const HomeWrap = () => {
+    const [hasScroll, setHasScroll] = useState(false);
+
+    useEffect(() => {
+        const consultaSection = document.getElementById('resultados');
+        if (consultaSection) {
+          const checkScroll = () => {
+            const isScrollable =
+              consultaSection.scrollHeight > consultaSection.clientHeight;
+            setHasScroll(isScrollable);
+          };
+    
+          checkScroll(); 
+    
+          const resizeObserver = new ResizeObserver(checkScroll);
+          resizeObserver.observe(consultaSection);
+    
+          return () => resizeObserver.disconnect();
+        }
+      }, []);
+
+
     return (
         <div className="relative min-h-screen">
-            <div className="absolute top-0 z-[-2] h-full w-full bg-[#1D1D1D] bg-[radial-gradient(100%_50%_at_50%_0%,rgba(206,255,32,0.13)_0,rgba(206,255,32,0)_50%,rgba(206,255,32,0)_100%)] lg:bg-[radial-gradient(100%_10%_at_50%_0%,rgba(206,255,32,0.20)_0,rgba(206,255,32,0)_50%,rgba(206,255,32,0)_100%)]"></div>
-            <div className="px-8 md:px-9 lg:px-24 xl:px-40 2xl:px-80 ">
+            <div className="absolute top-0 z-[-2] h-full w-full bg-[#1D1D1D] bg-[radial-gradient(100%_50%_at_50%_0%,rgba(206,255,32,0.13)_0,rgba(206,255,32,0)_50%,rgba(206,255,32,0)_100%)] lg:bg-[radial-gradient(100%_10%_at_50%_0%,rgba(206,255,32,0.20)_0,rgba(206,255,32,0)_50%,rgba(206,255,32,0)_100%)]" ></div>
+            <div id="header"></div>
+            <div className="px-8 md:px-9 lg:px-24 xl:px-40 2xl:px-80">
                 <Header />
             </div>
             <div className="px-8 md:px-9 lg:px-24 xl:px-40 2xl:px-80 mt-40 md:mt-48 lg:mt-72 xl:mt-96" id='quehacemos'>
@@ -26,7 +49,7 @@ const HomeWrap = () => {
             <div className="px-8 md:px-9 lg:px-24 xl:px-40 2xl:px-80 mt-40 md:mt-48 lg:mt-72 xl:mt-96" id="comoTrabajamos">
                 <FourthSection />
             </div>
-            <div className="px-8 md:px-9 lg:px-24 xl:px-40 2xl:px-80 mt-40 md:mt-48 lg:mt-72 xl:mt-96" id="resultados">
+            <div className={`px-8 md:px-9 lg:px-24 xl:px-40 2xl:px-80 mt-40 md:mt-48 lg:mt-72 xl:mt-96 overflow-y-auto h-screen ${hasScroll ? 'pb-20' : ''}`} id="resultados">
                 <FifthSection />
             </div>
             {/* <div className="px-8 md:px-9 lg:px-24 xl:px-40 2xl:px-80 mt-40 md:mt-48 lg:mt-72 xl:mt-96" id="clientes">
@@ -38,7 +61,7 @@ const HomeWrap = () => {
             <div className="px-8 md:px-9 lg:px-24 xl:px-40 2xl:px-80 mt-40 md:mt-48 lg:mt-72 xl:mt-96" id="contacto">
                 <EighthSection />
             </div>
-            <div className="px-8 md:px-9 lg:px-24 xl:px-40 2xl:px-80 mt-40 md:mt-48 lg:mt-72 xl:mt-96">
+            <div className="px-8 md:px-9 lg:px-24 xl:px-40 2xl:px-80 mt-40 md:mt-48 lg:mt-72 xl:mt-96" id="footer">
                 <Footer />
             </div>
         </div>

@@ -40,7 +40,7 @@ export default function Document() {
                 <meta name="twitter:description" content="Expertos en marketing digital y desarrollo web." />
                 <meta name="twitter:image" content="/GauchoDigital_Iso.webp" />
             </Head>
-            <body className="antialiased relative">
+            <body className="antialiased relative xl:overflow-hidden">
 
                 <Main />
                 <NextScript />
