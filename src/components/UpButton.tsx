@@ -69,10 +69,10 @@ export const UpButton = () => {
     };
 
     return (
-        <div className="fixed bottom-4 right-4 z-50">
+        <div className="hidden xl:fixed bottom-4 right-4 z-50">
             <button
                 onClick={handleGoBack}
-                className={`p-4 bg-[#CEFF20] hover:bg-[#a9dc16]  rounded-full  ${previousSection ? "opacity-100" : "opacity-50 cursor-not-allowed"
+                className={` p-4 bg-[#CEFF20] hover:bg-[#a9dc16]  rounded-full  ${previousSection ? "opacity-100" : "opacity-50 cursor-not-allowed"
                     }`}
                 disabled={!previousSection}
             >

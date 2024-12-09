@@ -27,6 +27,7 @@ const stolzRegular = localFont({
 export default function Home() {
     return (
         <div className={`${stolzlight.variable} ${stolzBold.variable} ${stolzMedium.variable} ${stolzRegular.variable} `}>
+            
             <UpButton></UpButton>
             <HomeWrap />
         </div>

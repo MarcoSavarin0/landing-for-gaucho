@@ -49,7 +49,7 @@ const HomeWrap = () => {
             <div className="px-8 md:px-9 lg:px-24 xl:px-40 2xl:px-80 mt-40 md:mt-48 lg:mt-72 xl:mt-96" id="comoTrabajamos">
                 <FourthSection />
             </div>
-            <div className={`px-8 md:px-9 lg:px-24 xl:px-40 2xl:px-80 mt-40 md:mt-48 lg:mt-72 xl:mt-96 overflow-y-auto h-screen ${hasScroll ? 'pb-20' : ''}`} id="resultados">
+            <div className={`px-8 md:px-9 lg:px-24 xl:px-40 2xl:px-80 mt-40 md:mt-48 lg:mt-72 xl:mt-96 xl:overflow-y-auto xl:h-screen ${hasScroll ? 'pb-20' : ''}`} id="resultados">
                 <FifthSection />
             </div>
             {/* <div className="px-8 md:px-9 lg:px-24 xl:px-40 2xl:px-80 mt-40 md:mt-48 lg:mt-72 xl:mt-96" id="clientes">
