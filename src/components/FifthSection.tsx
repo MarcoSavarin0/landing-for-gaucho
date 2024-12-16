@@ -25,6 +25,7 @@ const FifthSection = () => {
             animate={inView ? "visible" : "hidden"}
             variants={variants}
             transition={{ duration: 0.7 }}
+            className="xl:m-auto"
         >
             <div className="relative mb-16">
                 <h2 className="text-white text-3xl text-center font-stolzMedium mb-3 lg:text-[40px]">

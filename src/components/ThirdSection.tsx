@@ -16,7 +16,7 @@ const ThirdSection = () => {
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
             variants={variants}
-            transition={{ duration: 0.7 }} className="flex flex-col lg:flex-row lg:gap-9 ">
+            transition={{ duration: 0.7 }} className="flex flex-col lg:flex-row lg:gap-9 m-auto ">
             <div className="lg:w-[50%]">
                 <h2 className="text-white text-3xl font-stolzMedium mb-3 2xl:text-[40px]">
                     ¿Qué obstáculos frenan el crecimiento de las empresas?

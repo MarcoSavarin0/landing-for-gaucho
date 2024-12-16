@@ -16,7 +16,7 @@ const FourthSection = () => {
             animate={inView ? "visible" : "hidden"}
             variants={variants}
             transition={{ duration: 0.7 }}
-            className="flex flex-col items-center justify-center gap-6 2xl:gap-10">
+            className="flex flex-col items-center justify-center gap-6 2xl:gap-10 xl:m-auto">
             <div>
                 <h2 className="text-white  text-3xl font-stolzMedium mb-3 lg:text-[40px] text-nowrap 2xl:text-[48px] lg:mb-7">Nuestra <span className="text-[#CEFF20]">metodología</span></h2>
                 <p className="text-white font-stolzLight leading-tight text-[16px]">Ofrecemos una estrategia digital personalizada que no solo se adapta a tus necesidades, sino que está diseñada para generar impacto. Combinamos creatividad y datos para que cada acción tenga resultados reales y medibles.</p>

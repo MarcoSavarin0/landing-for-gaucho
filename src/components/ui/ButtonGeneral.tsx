@@ -19,28 +19,25 @@ const ButtonG = ({ text, transparent, width, whatsapp, notArrow, textSize, link 
             const target = document.querySelector(link);
     
             if (target) {
-                let offset = 0;
     
-                const screenHeight = window.innerHeight;
-    
-                if (link === "#quehacemos") {
-                    offset = screenHeight < 768 ? -150 : -300;
-                } else if (link === "#ayudamos") {
-                    offset = screenHeight < 768 ? -80 : -120;
-                } else if (link === "#comoTrabajamos") {
-                    offset = screenHeight < 768 ? -50 : -100;
-                } else if (link === "#resultados") {
-                    offset = screenHeight < 768 ? -50 : -100;
-                } else if (link === "#clientes") {
-                    offset = screenHeight < 768 ? -100 : -200;
-                } else if (link === "#consulta") {
-                    offset = screenHeight < 768 ? -100 : -200;
-                } else if (link === "#contacto") {
-                    offset = screenHeight < 768 ? 30 : -100;
-                }
+                // if (link === "#quehacemos") {
+                //     offset = screenHeight < 768 ? -150 : -300;
+                // } else if (link === "#ayudamos") {
+                //     offset = screenHeight < 768 ? -80 : -120;
+                // } else if (link === "#comoTrabajamos") {
+                //     offset = screenHeight < 768 ? -50 : -100;
+                // } else if (link === "#resultados") {
+                //     offset = screenHeight < 768 ? -50 : -100;
+                // } else if (link === "#clientes") {
+                //     offset = screenHeight < 768 ? -100 : -200;
+                // } else if (link === "#consulta") {
+                //     offset = screenHeight < 768 ? -100 : -200;
+                // } else if (link === "#contacto") {
+                //     offset = screenHeight < 768 ? 30 : -100;
+                // }
     
                 const position =
-                    target.getBoundingClientRect().top + window.scrollY + offset;
+                    target.getBoundingClientRect().top + window.scrollY;
     
                 window.scrollTo({ top: position, behavior: "smooth" });
             }

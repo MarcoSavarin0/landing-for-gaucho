@@ -17,7 +17,7 @@ const SeventhSection = () => {
             animate={inView ? "visible" : "hidden"}
             variants={variants}
             transition={{ duration: 0.7 }}
-            className='flex justify-between items-center bg-[#181819] border-2 border-[#242425] rounded-xl p-9 lg:w-[40%] lg:mx-auto'>
+            className='flex justify-between items-center bg-[#181819] border-2 border-[#242425] rounded-xl p-9 lg:w-[40%] lg:mx-auto xl:m-auto'>
             <div className=''>
                 <div ref={ref}>
                     <h2 className="text-white text-2xl lg:text-3xl font-stolzMedium mb-2 ">¿Listo para

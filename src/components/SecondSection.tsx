@@ -17,7 +17,7 @@ const SecondSection = () => {
         animate={inView ? "visible" : "hidden"}
         variants={variants}
         transition={{ duration: 0.7 }}
-        className='flex flex-col gap-10 lg:flex-row-reverse items-center 2xl:gap-14 justify-center'  >
+        className='flex flex-col gap-10 lg:flex-row-reverse items-center 2xl:gap-14 justify-center xl:m-auto'  >
             <div className='lg:w-3/4 2xl:pr-12'>
                 <h2 className='text-white text-3xl font-stolzMedium mb-3 lg:text-[40px]' ref={ref}>
                     Lo que hacemos

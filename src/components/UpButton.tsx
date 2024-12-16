@@ -44,22 +44,6 @@ export const UpButton = () => {
                 let offset = 0;
                 const screenHeight = window.innerHeight;
                 if (previousSection === "header") offset = screenHeight < 768 ? 0 : 0;
-                else if (previousSection === "quehacemos") {
-                    offset = screenHeight < 768 ? -150 : -300;
-                } else if (previousSection === "ayudamos") {
-                    offset = screenHeight < 768 ? -80 : -120;
-                } else if (previousSection === "comoTrabajamos") {
-                    offset = screenHeight < 768 ? -50 : -100;
-                } else if (previousSection === "resultados") {
-                    offset = screenHeight < 768 ? -50 : -100;
-                } else if (previousSection === "clientes") {
-                    offset = screenHeight < 768 ? -100 : -200;
-                } else if (previousSection === "consulta") {
-                    offset = screenHeight < 768 ? -100 : -300;
-                } else if (previousSection === "contacto") {
-                    offset = screenHeight < 768 ? 30 : -100;
-                }
-
                 window.scrollTo({
                     top: prevElement.offsetTop + offset,
                     behavior: "smooth"

@@ -41,7 +41,7 @@ export default function Document() {
                 <meta name="twitter:image" content="/GauchoDigital_Iso.webp" />
             </Head>
             <body className="antialiased relative xl:overflow-hidden">
-
+                
                 <Main />
                 <NextScript />
             </body>
