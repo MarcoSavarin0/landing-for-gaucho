@@ -1,11 +1,11 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { FaArrowUp } from "react-icons/fa";
 
-const sectionIds = ["header","quehacemos", "ayudamos", "comoTrabajamos", "resultados", "consulta", "contacto"];
+const sectionIds = ["header", "quehacemos", "ayudamos", "comoTrabajamos", "resultados", "consulta", "contacto"];
 
 export const UpButton = () => {
-    const [currentSection, setCurrentSection] = useState<string | null>(null); 
+    const [currentSection, setCurrentSection] = useState<string | null>(null);
     const [previousSection, setPreviousSection] = useState<string | null>(null);
 
     useEffect(() => {
@@ -37,7 +37,7 @@ export const UpButton = () => {
         };
     }, [currentSection]);
 
-    const handleGoBack = () => {
+    const handleGoBack = useCallback(() => {
         if (previousSection) {
             const prevElement = document.getElementById(previousSection);
             if (prevElement) {
@@ -46,11 +46,26 @@ export const UpButton = () => {
                 if (previousSection === "header") offset = screenHeight < 768 ? 0 : 0;
                 window.scrollTo({
                     top: prevElement.offsetTop + offset,
-                    behavior: "smooth"
+                    behavior: "smooth",
                 });
             }
         }
-    };
+    }, [previousSection]);
+    const handleScrollOrWheel = useCallback((event: WheelEvent) => {
+        if (event instanceof WheelEvent && event.deltaY < 0) {
+            handleGoBack();
+        }
+    }, [handleGoBack]);
+
+    useEffect(() => {
+        window.addEventListener("wheel", handleScrollOrWheel);
+    
+        return () => {
+            window.removeEventListener("wheel", handleScrollOrWheel);
+        };
+    }, [handleScrollOrWheel]);
+
+
 
     return (
         <div className="hidden xl:block fixed bottom-4 right-4 z-50">
@@ -58,7 +73,7 @@ export const UpButton = () => {
                 onClick={handleGoBack}
                 className={` p-4 bg-[#CEFF20] hover:bg-[#a9dc16]  rounded-full  ${previousSection ? "opacity-100" : "opacity-50 cursor-not-allowed"
                     }`}
-                disabled={!previousSection}
+                disabled={currentSection === 'header'}
             >
                 <p>
                     <FaArrowUp />
