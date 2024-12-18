@@ -51,19 +51,19 @@ export const UpButton = () => {
             }
         }
     }, [previousSection]);
-    const handleScrollOrWheel = useCallback((event: WheelEvent) => {
-        if (event instanceof WheelEvent && event.deltaY < 0) {
-            handleGoBack();
-        }
-    }, [handleGoBack]);
+    // const handleScrollOrWheel = useCallback((event: WheelEvent) => {
+    //     if (event instanceof WheelEvent && event.deltaY < 0) {
+    //         handleGoBack();
+    //     }
+    // }, [handleGoBack]);
 
-    useEffect(() => {
-        window.addEventListener("wheel", handleScrollOrWheel);
+    // useEffect(() => {
+    //     window.addEventListener("wheel", handleScrollOrWheel);
     
-        return () => {
-            window.removeEventListener("wheel", handleScrollOrWheel);
-        };
-    }, [handleScrollOrWheel]);
+    //     return () => {
+    //         window.removeEventListener("wheel", handleScrollOrWheel);
+    //     };
+    // }, [handleScrollOrWheel]);
 
 
 

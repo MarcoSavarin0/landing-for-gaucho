@@ -9,34 +9,45 @@ import SeventhSection from "./SeventhSection"
 // import SixthSection from "./SixthSection"
 import ThirdSection from "./ThirdSection"
 import { useEffect, useState } from 'react';
-
+import { useScroll } from "@/context/ScrollContext"
+import AlertScroll from "./ui/AlertScroll"
 
 const HomeWrap = () => {
     const [hasScroll, setHasScroll] = useState(false);
+    const { hasScrolled, resetScroll  } = useScroll();
 
     useEffect(() => {
         const consultaSection = document.getElementById('resultados');
         if (consultaSection) {
-          const checkScroll = () => {
-            const isScrollable =
-              consultaSection.scrollHeight > consultaSection.clientHeight;
-            setHasScroll(isScrollable);
-          };
-    
-          checkScroll(); 
-    
-          const resizeObserver = new ResizeObserver(checkScroll);
-          resizeObserver.observe(consultaSection);
-    
-          return () => resizeObserver.disconnect();
+            const checkScroll = () => {
+                const isScrollable =
+                    consultaSection.scrollHeight > consultaSection.clientHeight;
+                setHasScroll(isScrollable);
+            };
+
+            checkScroll();
+
+            const resizeObserver = new ResizeObserver(checkScroll);
+            resizeObserver.observe(consultaSection);
+
+            return () => resizeObserver.disconnect();
         }
-      }, []);
-
-
+    }, []);
+    if (hasScrolled){
+        setTimeout(() =>{
+            resetScroll();
+        },3800)
+    }
     return (
         <div className="relative min-h-screen">
             <div className="absolute top-0 z-[-2] h-full w-full bg-[#1D1D1D] bg-[radial-gradient(100%_50%_at_50%_0%,rgba(206,255,32,0.13)_0,rgba(206,255,32,0)_50%,rgba(206,255,32,0)_100%)] lg:bg-[radial-gradient(100%_10%_at_50%_0%,rgba(206,255,32,0.20)_0,rgba(206,255,32,0)_50%,rgba(206,255,32,0)_100%)] " ></div>
             <div id="header"></div>
+            {
+                hasScrolled && (<div className="hidden lg:block lg:fixed lg:top-4 lg:right-5">
+                    <AlertScroll title="Aprieta el boton" description="no se puede utilizar el scroll" />
+                </div>)
+            }
+
             <div className="px-8 md:px-9 lg:px-24 xl:px-40 2xl:px-80 lg:h-[100vh] 2k:px-[500px]">
                 <Header />
             </div>
