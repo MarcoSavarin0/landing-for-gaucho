@@ -28,7 +28,7 @@ const FifthSection = () => {
             className="xl:m-auto"
         >
             <div className="relative mb-16">
-                <h2 className="text-white text-3xl text-center font-stolzMedium mb-3 lg:text-[40px]">
+                <h2 className="text-white text-3xl text-center font-stolzMedium mb-3 lg:text-[40px] 2k:text-[48px]">
                     <span className="text-[#CEFF20]">Resultados</span> que hablan
                     por si solos
                 </h2>

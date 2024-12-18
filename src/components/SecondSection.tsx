@@ -19,10 +19,10 @@ const SecondSection = () => {
         transition={{ duration: 0.7 }}
         className='flex flex-col gap-10 lg:flex-row-reverse items-center 2xl:gap-14 justify-center xl:m-auto'  >
             <div className='lg:w-3/4 2xl:pr-12'>
-                <h2 className='text-white text-3xl font-stolzMedium mb-3 lg:text-[40px]' ref={ref}>
+                <h2 className='text-white text-3xl font-stolzMedium mb-3 lg:text-[40px] 2k:text-[50px]' ref={ref}>
                     Lo que hacemos
                 </h2>
-                <p className='text-white text-[16px] leading-tight font-stolzLight mb-10 2xl:w-3/4'>
+                <p className='text-white text-[16px] leading-tight font-stolzLight mb-10 2xl:w-3/4 2k:text-[20px]'>
                     Nos enfocamos en estrategias que maximizan tu inversión, ya sea para captar clientes, hacer crecer tu empresa o fortalecer la identidad de tu marca. Cada acción que diseñamos busca generar un impacto relevante y medible.
                 </p>
                 <div className='relative'>

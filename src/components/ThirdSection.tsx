@@ -18,46 +18,46 @@ const ThirdSection = () => {
             variants={variants}
             transition={{ duration: 0.7 }} className="flex flex-col lg:flex-row lg:gap-9 m-auto ">
             <div className="lg:w-[50%]">
-                <h2 className="text-white text-3xl font-stolzMedium mb-3 2xl:text-[40px]">
+                <h2 className="text-white text-3xl font-stolzMedium mb-3 2xl:text-[40px] 2k:text-[48px]">
                     ¿Qué obstáculos frenan el crecimiento de las empresas?
                 </h2>
                 <div className="flex flex-col gap-5 items-center mb-10 mt-6">
                     <div className="flex flex-row gap-4 items-center">
                         <div
-                            className="bg-[#181819] rounded-full flex items-center justify-center p-6 w-10 h-10 border-2 border-solid border-[#242425] bg-[url('/signoPeso.svg')] bg-no-repeat bg-center bg-[length:30%]"
+                            className="bg-[#181819] rounded-full flex items-center justify-center p-6 w-10 h-10 border-2 border-solid border-[#242425] bg-[url('/signoPeso.svg')] bg-no-repeat bg-center bg-[length:30%] 2k:w-14 2k:h-14"
                         ></div>
                         <div>
-                            <p className="text-white text-[14px] leading-tight sm:text-[16px] font-stolzLight">
+                            <p className="text-white text-[14px] leading-tight sm:text-[16px] font-stolzLight 2k:text-[20px]">
                                 <span className="font-stolzMedium">Inversión sin retorno:</span> Empresas que invierten en marketing sin ver crecimiento en ventas o clientes, perdiendo la oportunidad de escalar.
                             </p>
                         </div>
                     </div>
                     <div className="flex flex-row gap-4 items-center" ref={ref}>
                         <div
-                            className="bg-[#181819] rounded-full flex items-center justify-center p-6 w-10 h-10 border-2 border-solid border-[#242425] bg-[url('/world.svg')] bg-no-repeat bg-center bg-[length:50%]"
+                            className="bg-[#181819] rounded-full flex items-center justify-center p-6 w-10 h-10 border-2 border-solid border-[#242425] bg-[url('/world.svg')] bg-no-repeat bg-center bg-[length:50%] 2k:w-14 2k:h-14"
                         ></div>
                         <div>
-                            <p className="text-white text-[14px] leading-tight sm:text-[16px] font-stolzLight">
+                            <p className="text-white text-[14px] leading-tight sm:text-[16px] font-stolzLight 2k:text-[20px]">
                                 <span className="font-stolzMedium">Falta de presencia de marca:</span> Marcas que no logran conectar con su audiencia ni construir una imagen memorable
                             </p>
                         </div>
                     </div>
                     <div className="flex flex-row gap-4 items-center">
                         <div
-                            className="bg-[#181819] rounded-full flex items-center justify-center p-6 w-10 h-10 border-2 border-solid border-[#242425] bg-[url('/downArrow.svg')] bg-no-repeat bg-center bg-[length:55%]"
+                            className="bg-[#181819] rounded-full flex items-center justify-center p-6 w-10 h-10 border-2 border-solid border-[#242425] bg-[url('/downArrow.svg')] bg-no-repeat bg-center bg-[length:55%] 2k:w-14 2k:h-14"
                         ></div>
                         <div>
-                            <p className="text-white text-[14px] leading-tight sm:text-[16px] font-stolzLight">
+                            <p className="text-white text-[14px] leading-tight sm:text-[16px] font-stolzLight 2k:text-[20px]">
                                 <span className="font-stolzMedium">Leads sin potencial: </span> Tener tráfico no siempre significa atraer a los clientes que impulsan el crecimiento de la empresa.
                             </p>
                         </div>
                     </div>
                     <div className="flex flex-row gap-4 items-center">
                         <div
-                            className="bg-[#181819] rounded-full flex items-center justify-center p-6 w-10 h-10 border-2 border-solid border-[#242425] bg-[url('/accuracy.svg')] bg-no-repeat bg-center bg-[length:50%]"
+                            className="bg-[#181819] rounded-full flex items-center justify-center p-6 w-10 h-10 border-2 border-solid border-[#242425] bg-[url('/accuracy.svg')] bg-no-repeat bg-center bg-[length:50%] 2k:w-14 2k:h-14"
                         ></div>
                         <div>
-                            <p className="text-white text-[14px] leading-tight sm:text-[16px] font-stolzLight">
+                            <p className="text-white text-[14px] leading-tight sm:text-[16px] font-stolzLight 2k:text-[20px]">
                                 <span className="font-stolzMedium">Estrategias sin estructura: </span> Campañas sin una metodología clara, sin una visión de futuro ni capacidad de escalar, que se quedan cortas en resultados tangibles.
                             </p>
                         </div>

@@ -32,11 +32,11 @@ const ChartBars = () => {
         <div className='w-full '>
             <Card className="w-full lg:h-[320px] xl:h-[350px] 2xl:h-[435px]  bg-[#181819] border-2 border-[#242425] rounded-xl">
                 <CardHeader>
-                    <CardDescription className='text-[#FF8CF4] font-stolzLight lg:ml-7'>Valor de conversión de compras</CardDescription>
+                    <CardDescription className='text-[#FF8CF4] font-stolzLight lg:ml-7 2k:text-[16px]'>Valor de conversión de compras</CardDescription>
                 </CardHeader>
                 <CardContent>
-                    <ChartContainer config={chartConfig} className="w-full h-full py-5">
-                        <BarChart accessibilityLayer data={chartData}>
+                    <ChartContainer config={chartConfig} className="w-full h-full py-5 ">
+                        <BarChart accessibilityLayer data={chartData} className=''>
                             <CartesianGrid vertical={false} />
                             <XAxis
                                 dataKey="month"
@@ -61,8 +61,8 @@ const ChartBars = () => {
                 </CardContent>
             </Card>
             <div className="text-center text-white my-6 px-4">
-                <h3 className="text-xl font-stolzMedium xl:text-3xl lg:mb-3">Aumento en conversiones</h3>
-                <p className="text-[14px] font-stolzRegular text-gray-200 xl:text-[16px]">Gracias a nuestra estrategia de paid media, logramos un gran crecimiento en ventas y aumentar un 130% la facturación en solo 6 meses.</p>
+                <h3 className="text-xl font-stolzMedium xl:text-3xl lg:mb-3 2k:text-[36px]">Aumento en conversiones</h3>
+                <p className="text-[14px] font-stolzRegular text-gray-200 xl:text-[16px] 2k:text-[20px]">Gracias a nuestra estrategia de paid media, logramos un gran crecimiento en ventas y aumentar un 130% la facturación en solo 6 meses.</p>
             </div>
         </div>
     )

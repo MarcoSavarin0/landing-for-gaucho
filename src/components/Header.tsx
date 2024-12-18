@@ -24,7 +24,7 @@ const Header = () => {
                 <TopHeader />
             </div>
             <section className='mt-24 lg:mt-16  xl:mt-36 md:relative md:w-[65%] lg:w-[70%]' ref={ref}>
-                <h1 className='text-white font-stolzRegular text-4xl leading-tight mb-4 lg:text-5xl lg:mb-5 xl:text-6xl 2xl:pr-40'>
+                <h1 className='text-white font-stolzRegular text-4xl leading-tight mb-4 lg:text-5xl lg:mb-5 xl:text-6xl 2xl:pr-40 2k:text-[70px]'>
                     Transformando
                     ideas en
                     resultados
@@ -36,7 +36,7 @@ const Header = () => {
                     height={100}
                     className='hidden md:block md:absolute md:top-2 md:-right-12 lg:-right-10 xl:-right-24 2xl:right-12'
                 />
-                <p className='text-white font-stolzLight text-base leading-tight 2xl:w-[90%] 2xl:text-[20px] 2xl:leading-tight 2xl:pr-20'>
+                <p className='text-white font-stolzLight text-base leading-tight 2xl:w-[90%] 2xl:text-[20px] 2xl:leading-tight 2xl:pr-20 2k:text-[25px]'>
                     Desde hace años, nos asociamos con empresas que buscan crecer y destacarse. Convertimos tus ideas y objetivos en estrategias digitales que generan resultados de verdad.
                 </p>
                 <div className='mt-7 relative md:mt-10'>

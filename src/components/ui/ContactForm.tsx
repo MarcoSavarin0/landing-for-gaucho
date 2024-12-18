@@ -105,7 +105,7 @@ const ContactForm = () => {
                 className="flex flex-col gap-6 lg:items-center lg:justify-center w-full"
             >
                 <div className="flex flex-col gap-4">
-                    <h2 className="text-2xl text-white font-stolzMedium mb-10 lg:text-[40px] ">
+                    <h2 className="text-2xl text-white font-stolzMedium mb-10 lg:text-[40px] 2k:text-[49px]">
                         Contacto
                     </h2>
                     <div className="flex flex-col lg:flex-row lg:gap-8 items-start">
@@ -115,7 +115,7 @@ const ContactForm = () => {
                                 name="name"
                                 render={({ field }) => (
                                     <FormItem>
-                                        <FormLabel className="text-white font-stolzLight">Nombre*</FormLabel>
+                                        <FormLabel className="text-white font-stolzLight 2k:text-[20px]">Nombre*</FormLabel>
                                         <FormControl>
                                             <Input className="text-[#9CA3AF] bg-[#27282D] border-[1px] border-[#9CA3AF] font-stolzLight" placeholder="Ingresa tu nombre" {...field} />
                                         </FormControl>
@@ -130,7 +130,7 @@ const ContactForm = () => {
                                 name="email"
                                 render={({ field }) => (
                                     <FormItem className="">
-                                        <FormLabel className="text-white font-stolzLight">Correo Electrónico*</FormLabel>
+                                        <FormLabel className="text-white font-stolzLight 2k:text-[19px]">Correo Electrónico*</FormLabel>
                                         <FormControl>
                                             <Input className="text-[#9CA3AF] bg-[#27282D] border-[1px] border-[#9CA3AF] font-stolzLight" placeholder="email@ejemplo.com" {...field} />
                                         </FormControl>
@@ -147,7 +147,7 @@ const ContactForm = () => {
                                 name="empresa"
                                 render={({ field }) => (
                                     <FormItem>
-                                        <FormLabel className="text-white font-stolzLight">Empresa*</FormLabel>
+                                        <FormLabel className="text-white font-stolzLight 2k:text-[18px]">Empresa*</FormLabel>
                                         <FormControl>
                                             <Input className="text-[#9CA3AF] bg-[#27282D] border-[1px] border-[#9CA3AF] font-stolzLight" placeholder="Nombre de tu empresa" {...field} />
                                         </FormControl>
@@ -161,7 +161,7 @@ const ContactForm = () => {
                                     name="codArea"
                                     render={({ field }) => (
                                         <FormItem className="w-1/4">
-                                            <FormLabel className="text-white font-stolzLight text-nowrap">Cód. Área</FormLabel>
+                                            <FormLabel className="text-white font-stolzLight text-nowrap ">Cód. Área</FormLabel>
                                             <FormControl>
                                                 <Input className="text-[#9CA3AF] bg-[#27282D] border-[1px] border-[#9CA3AF] font-stolzLight" placeholder="+54" {...field} />
                                             </FormControl>
@@ -174,7 +174,7 @@ const ContactForm = () => {
                                     name="telefono"
                                     render={({ field }) => (
                                         <FormItem className="w-full">
-                                            <FormLabel className="text-white font-stolzLight">Número Telefónico</FormLabel>
+                                            <FormLabel className="text-white font-stolzLight 2k:text-[18px] ">Número Telefónico</FormLabel>
                                             <FormControl>
                                                 <Input className="text-[#9CA3AF] bg-[#27282D] border-[1px] border-[#9CA3AF] font-stolzLight" placeholder="Ingresa tu número" {...field} />
                                             </FormControl>
@@ -191,7 +191,7 @@ const ContactForm = () => {
                             name="presupuesto"
                             render={({ field }) => (
                                 <FormItem>
-                                    <FormLabel className="text-white font-stolzLight">¿Cuánto presupuesto están invirtiendo?</FormLabel>
+                                    <FormLabel className="text-white font-stolzLight 2k:text-[18px]">¿Cuánto presupuesto están invirtiendo?</FormLabel>
                                     <FormControl>
                                         <Input className="text-[#9CA3AF] bg-[#27282D] border-[1px] border-[#9CA3AF] font-stolzLight" placeholder="Presupuesto" {...field} />
                                     </FormControl>
@@ -204,7 +204,7 @@ const ContactForm = () => {
                             name="mensaje"
                             render={({ field }) => (
                                 <FormItem>
-                                    <FormLabel className="text-white font-stolzLight">Mensaje</FormLabel>
+                                    <FormLabel className="text-white font-stolzLight 2k:text-[18px]">Mensaje</FormLabel>
                                     <FormControl>
                                         <Textarea className="text-[#9CA3AF] bg-[#27282D] border-[1px] border-[#9CA3AF] font-stolzLight" placeholder="Déjanos tu consulta" {...field} />
                                     </FormControl>
