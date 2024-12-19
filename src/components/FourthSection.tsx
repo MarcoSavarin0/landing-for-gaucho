@@ -53,7 +53,7 @@ const FourthSection = () => {
             </div>
             <div className="w-full flex flex-col gap-5 items-center lg:flex-row lg:items-center 2xl:mt-6">
                 <ButtonG text="Resultados clientes Gaucho" transparent={false} width="w-full md:w-fit md:w-auto lg:w-1/2" arrowUp={false} notArrow={false} link='#resultados' whatsapp={false} textSize='' />
-                <ButtonG text="Conocé nuestro portfolio" transparent={true} width="w-full md:w-fit md:w-auto lg:w-1/2" arrowUp={false} notArrow={false} link='https://www.gaucho.digital/portfolio' whatsapp={false} textSize='' />
+                <ButtonG text="Conocé nuestro portfolio" transparent={true} width="w-full md:w-fit md:w-auto lg:w-1/2" arrowUp={false} notArrow={false} link='https://docs.google.com/presentation/d/e/2PACX-1vTTFg-h_EAn5UEMON7U_LEGzaj33iMKoNvWK0e-AMuRB7SXQ_aHU-icf6y1PvKw73kLoR_MOZEc__Z4/pub?start=false&loop=false&delayms=15000' whatsapp={false} textSize='' />
             </div>
         </motion.div>
     )
