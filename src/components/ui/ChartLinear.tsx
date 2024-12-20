@@ -80,7 +80,7 @@ const ChartLinear = () => {
             </Card>
             <div className="text-center text-white my-6 px-4">
                 <h3 className="text-xl font-stolzMedium xl:text-3xl lg:mb-3 2k:text-[36px]">Reducción de costos</h3>
-                <p className="text-[14px] font-stolzRegular text-gray-200 xl:text-[16px] 2k:text-[20px]">En solo 3 meses, logramos que María Magdalena, marca de cosmética, aumentara su ROAS de 4.34% a 22.39%</p>
+                <p className="text-[14px] font-stolzRegular text-gray-200 xl:text-[16px] 2k:text-[20px]">En solo 3 meses, logramos que María Magdalena, marca de cosmética, aumentara su ROAS de 4.34 a 22.39</p>
             </div>
         </div>
     );

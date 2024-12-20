@@ -32,7 +32,7 @@ const ChartBars = () => {
         <div className='w-full '>
             <Card className="w-full lg:h-[320px] xl:h-[350px] 2xl:h-[435px]  bg-[#181819] border-2 border-[#242425] rounded-xl">
                 <CardHeader>
-                    <CardDescription className='text-[#FF8CF4] font-stolzLight lg:ml-7 2k:text-[16px]'>Valor de conversión de compras</CardDescription>
+                    <CardDescription className='text-[#FF8CF4] font-stolzLight lg:ml-7 2k:text-[16px]'>Facturación</CardDescription>
                 </CardHeader>
                 <CardContent>
                     <ChartContainer config={chartConfig} className="w-full h-full py-5 ">
